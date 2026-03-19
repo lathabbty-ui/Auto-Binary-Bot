@@ -1,4 +1,4 @@
 python-telegram-bot==22.5
-pandas
-pandas-ta
+pandas==2.2.3
+git+https://github.com/twopirllc/pandas-ta.git
 tvDatafeed @ git+https://github.com/rongardF/tvdatafeed.git
