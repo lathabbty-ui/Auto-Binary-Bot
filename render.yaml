@@ -1,0 +1,23 @@
+services:
+  - type: worker
+    name: telegram-signal-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    autoDeploy: true
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
+      - key: SCAN_INTERVAL_SECONDS
+        value: "5"
+      - key: BARS
+        value: "200"
+      - key: PAIRS
+        value: "EURUSD:OANDA,GBPUSD:OANDA,AUDUSD:OANDA"
+      - key: TV_USERNAME
+        sync: false
+      - key: TV_PASSWORD
+        sync: false
